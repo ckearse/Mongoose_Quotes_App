@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Quoting App</title>
+  </head>
+  <body>
+    <h1>Welcome to Quoting Dojo</h1>
+    <form action="/quotes" method="POST">
+      <label>Your name:
+        <input type="text" name="name" placeholder="Your Name"> <br><br>
+      </label>
+      <label>Your quote:
+        <textarea type="textarea" name="quote" placeholder="Type your quote here.."></textarea> <br><br>
+      </label>
+      <input type="submit" value="Add my quote!">
+
+      <button><a href="/quotes">Skip to Quotes!</a></button>
+
+      <% if(messages.quote_submission){ %>
+        <div>Errors:
+          <% for(var error of messages.quote_submission){ %>
+            <p><%= error %></p>
+          <% } %>
+        </div>
+      <% } %>
+
+    </form>
+  </body>
+</html>

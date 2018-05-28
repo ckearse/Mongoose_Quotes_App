@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Quotes</title>
+  </head>
+  <body>
+    <a href='/'>Home</a>
+
+    <h1>Here are the awesome quotes!</h1>
+
+    <% if(quotes.length > 0){ %>
+      <div>
+
+        <% for(var quote in quotes){ %>
+          
+          <p><%= quotes[quote].quote %> <br>
+          <label>-<%= quotes[quote].name %> <%= quotes[quote].createdAt %></label></p>
+
+        <% } %>
+
+      </div>
+    <% } %>
+
+  </body>
+</html>
